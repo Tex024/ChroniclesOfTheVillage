@@ -63,10 +63,23 @@ The system generates:
 ## Getting Started
 
 ### Requirements
-- Python 3.9+
+- `Python 3.9+`
 
 ### Installation
 ```bash
-git clone https://github.com/yourusername/chronicles-of-the-village.git
+git clone https://github.com/Tex024/ChroniclesOfTheVillage.git
+```
+
+### Usage
+```bash
 cd chronicles-of-the-village
-pip install -r requirements.txt
+python3 main.py
+```
+Outputs will be written in the output directory
+
+---
+
+## Contributing
+The system is fully modular.
+New professions, roles, and abilities can be added by editing the JSON files.
+Pull requests are welcome!
