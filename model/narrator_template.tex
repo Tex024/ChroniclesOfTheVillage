@@ -1,0 +1,148 @@
+\documentclass[12pt, a4paper]{article}
+
+% --- Preamble and Packages ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[lining]{ebgaramond}
+\usepackage[left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
+\usepackage{tcolorbox}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{parskip}
+
+% --- Custom Colors ---
+\definecolor{Parchment}{HTML}{F8F2E4}
+\definecolor{OldInk}{HTML}{3C2A21}
+\definecolor{GoodGreen}{HTML}{4CAF50}
+\definecolor{EvilRed}{HTML}{D32F2F}
+\definecolor{NeutralGray}{HTML}{757575}
+
+% --- Box Style ---
+\tcbset{
+  narrbox/.style={
+    sharp corners,
+    boxrule=1.2pt,
+    colback=Parchment,
+    colframe=OldInk,
+    enlarge top by=4mm,
+    fonttitle=\large\bfseries,
+    title filled,
+    coltitle=Parchment,
+    fonttitle=\centering,
+    top=4mm, bottom=4mm,
+    left=4mm, right=4mm
+  }
+}
+
+% --- Section Divider ---
+\newcommand{\sectiondivider}{%
+  \par\noindent\hrulefill\quad\raisebox{-0.5ex}{\textbf{✦}}\quad\hrulefill\par
+}
+
+% --- Placeholders ---
+\newcommand{\playerlist}{[Player List]}
+\newcommand{\specialabilities}{[Special Abilities]}
+\newcommand{\duskphase}{[Dusk Phase Abilities]}
+\newcommand{\midnightphase}{[Midnight Phase Abilities]}
+\newcommand{\predawnphase}{[Predawn Phase Abilities]}
+\newcommand{\initialabilities}{[Initial Knowledge Abilities]}
+
+% --- Helper Commands ---
+\newcommand{\playerentry}[4]{\item \textbf{#1} -- Profession: #2, Role: #3, Alignement: #4}
+\newcommand{\abilityentry}[3]{\item (#1) \textbf{#2}: #3}
+
+% --- Document Start ---
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+    {\Huge\textbf{Narrator’s Script}}\\
+    {\large Only for the Master of the Game}
+    \vspace{1cm}
+\end{center}
+
+% --- Players Overview ---
+\begin{tcolorbox}[narrbox, title={Players Overview}]
+\begin{itemize}[leftmargin=*, itemsep=2pt]
+    \playerlist
+    % Example: \playerentry{Alice}{Blacksmith}{Seer}{\color{GoodGreen}Good\color{black}}
+\end{itemize}
+\end{tcolorbox}
+
+\vspace{0.2cm}
+
+% --- Passive, One-Time, Death Trigger Abilities ---
+\begin{tcolorbox}[narrbox, title={Special Abilities}]
+\textit{Keep track of these abilities and resolve them when conditions are met.}
+\begin{itemize}[leftmargin=*, itemsep=2pt]
+    \specialabilities
+    % Example: \abilityentry{Necromancer}{Death Trigger}{effect...}
+\end{itemize}
+\end{tcolorbox}
+
+\vspace{0.2cm}
+
+% --- First Night ---
+\begin{tcolorbox}[narrbox, title={First Night}]
+\sectiondivider
+\begin{enumerate}[leftmargin=*, itemsep=2pt]
+    \item Call each character with \textbf{Initial Knowledge} abilities one at a time:
+    \begin{itemize}[leftmargin=2em]
+        \initialabilities
+        % Example: \abilityentry{Farmer}{Initial Knowledge}{effect...}
+    \end{itemize}
+    \item Continue with the standard night sequence: Dusk $\rightarrow$ Midnight $\rightarrow$ Predawn.
+\end{enumerate}
+\end{tcolorbox}
+
+\vspace{0.2cm}
+
+% --- Regular Night ---
+\begin{tcolorbox}[narrbox, title={Regular Night Sequence}]
+\sectiondivider
+
+\textbf{Dusk Phase}
+\begin{itemize}[leftmargin=2em, itemsep=2pt]
+    \duskphase
+    % Example: \abilityentry{Farmer}{Dusk Choice}{effect...}
+\end{itemize}
+
+\vspace{0.2cm}
+\textbf{Midnight Phase}
+\begin{itemize}[leftmargin=2em, itemsep=2pt]
+    \midnightphase
+    % Example: \abilityentry{Farmer}{Midnight Choice}{effect...}
+\end{itemize}
+
+\vspace{0.2cm}
+\textbf{Predawn Phase}
+\begin{itemize}[leftmargin=2em, itemsep=2pt]
+    \predawnphase
+    % Example: \abilityentry{Farmer}{Predawn Choice}{effect...}
+\end{itemize}
+\end{tcolorbox}
+
+\vspace{0.2cm}
+
+% --- Day ---
+\begin{tcolorbox}[narrbox, title={Day Sequence}]
+\sectiondivider
+
+\textbf{Morning:}
+\begin{itemize}[leftmargin=2em, itemsep=2pt]
+    \item Open discussion. Let players share suspicions.
+\end{itemize}
+
+\textbf{Afternoon:}
+\begin{itemize}[leftmargin=2em, itemsep=2pt]
+    \item Conduct voting.
+    \item The player with the plurality of votes is executed.
+\end{itemize}
+\end{tcolorbox}
+
+\vspace{1cm}
+\begin{center}
+    \textit{Guide the night and day faithfully, for only you know the hidden truths.}
+\end{center}
+
+\end{document}

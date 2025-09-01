@@ -1,0 +1,205 @@
+[
+  {
+    "name": "Farmer",
+    "abilities_list": [],
+    "tier_distribution": {
+      "TIER1": 2,
+      "TIER2": 3,
+      "TIER3": 5,
+      "TIER4": 10
+    },
+    "min_number": 0
+  },
+  {
+    "name": "Hunter",
+    "abilities_list": [
+      {
+        "ability_type": "DEATH_TRIGGER",
+        "effect": "When killed, may decide to take another player down.",
+        "group_ability": false
+      }
+    ],
+    "tier_distribution": {
+      "TIER1": 0,
+      "TIER2": 1,
+      "TIER3": 1,
+      "TIER4": 2
+    },
+    "min_number": 0
+  },
+  {
+    "name": "Guard",
+    "abilities_list": [
+      {
+        "ability_type": "DUSK_CHOICE",
+        "effect": "Choose a player to protect from death during this night.",
+        "group_ability": false
+      }
+    ],
+    "tier_distribution": {
+      "TIER1": 1,
+      "TIER2": 1,
+      "TIER3": 2,
+      "TIER4": 2
+    },
+    "min_number": 0
+  },
+  {
+    "name": "Mayor",
+    "abilities_list": [
+      {
+        "ability_type": "VOTE",
+        "effect": "Your vote counts two instead of one.",
+        "group_ability": false
+      }
+    ],
+    "tier_distribution": {
+      "TIER1": 0,
+      "TIER2": 0,
+      "TIER3": 1,
+      "TIER4": 1
+    },
+    "min_number": 0
+  },
+  {
+    "name": "Spy",
+    "abilities_list": [
+      {
+        "ability_type": "PREDAWN_CHOICE",
+        "effect": "Choose a player to see if he has waken up during the night",
+        "group_ability": false
+      }
+    ],
+    "tier_distribution": {
+      "TIER1": 1,
+      "TIER2": 1,
+      "TIER3": 1,
+      "TIER4": 2
+    },
+    "min_number": 0
+  },
+  {
+    "name": "Jailor",
+    "abilities_list": [
+      {
+        "ability_type": "PREDAWN_CHOICE",
+        "effect": "Choose a player to jail for the day, preventing him from voting.",
+        "group_ability": false
+      }
+    ],
+    "tier_distribution": {
+      "TIER1": 1,
+      "TIER2": 1,
+      "TIER3": 1,
+      "TIER4": 1
+    },
+    "min_number": 0
+  },
+  {
+    "name": "Doctor",
+    "abilities_list": [
+      {
+        "ability_type": "ONE_TIME",
+        "effect": "Choose a player killed during the previous night and save him.",
+        "group_ability": false
+      },
+      {
+        "ability_type": "ONE_TIME",
+        "effect": "Choose a player that is posoned, cure it.",
+        "group_ability": false
+      }
+    ],
+    "tier_distribution": {
+      "TIER1": 1,
+      "TIER2": 1,
+      "TIER3": 1,
+      "TIER4": 1
+    },
+    "min_number": 0
+  },
+  {
+    "name": "Investigator",
+    "abilities_list": [
+      {
+        "ability_type": "MIDNIGHT_CHOICE",
+        "effect": "Check if a player has an ability that triggers at night.",
+        "group_ability": false
+      }
+    ],
+    "tier_distribution": { 
+        "TIER1": 1, 
+        "TIER2": 1, 
+        "TIER3": 1, 
+        "TIER4": 2 
+    },
+    "min_number": 0
+  },
+  {
+    "name": "Sentry",
+    "abilities_list": [
+      {
+        "ability_type": "DUSK_CHOICE",
+        "effect": "Choose a player to watch for the night, preventing him from using his night choice abilities.",
+        "group_ability": false
+      }
+    ],
+    "tier_distribution": {
+        "TIER1": 1,
+        "TIER2": 1,
+        "TIER3": 1,
+        "TIER4": 2 
+    },
+    "min_number": 0
+  },
+  {
+    "name": "Noble",
+    "abilities_list": [
+      {
+        "ability_type": "PASSIVE",
+        "effect": "You can be voted out only if the majority of players voted you",
+        "group_ability": false
+      }
+    ],
+    "tier_distribution": {
+        "TIER1": 0,
+        "TIER2": 1,
+        "TIER3": 1,
+        "TIER4": 2 
+    },
+    "min_number": 0
+  },
+  {
+    "name": "Bard",
+    "abilities_list": [
+      {
+        "ability_type": "VOTE",
+        "effect": "You can choose one player. He cannot be voted out this turn.",
+        "group_ability": false
+      }
+    ],
+    "tier_distribution": {
+        "TIER1": 0,
+        "TIER2": 1,
+        "TIER3": 1,
+        "TIER4": 1
+    },
+    "min_number": 0
+  },
+  {
+    "name": "Knight",
+    "abilities_list": [
+      {
+        "ability_type": "VOTE",
+        "effect": "You cannot be killed during night.",
+        "group_ability": false
+      }
+    ],
+    "tier_distribution": {
+        "TIER1": 0,
+        "TIER2": 1,
+        "TIER3": 1,
+        "TIER4": 1
+    },
+    "min_number": 0
+  }
+]

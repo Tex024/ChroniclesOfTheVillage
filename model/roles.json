@@ -1,0 +1,285 @@
+[
+  {
+    "name": "Werewolf",
+    "alignment": "EVIL",
+    "abilities_list": [
+      {
+        "ability_type": "MIDNIGHT_CHOICE",
+        "effect": "Choose a victim to eliminate.",
+        "group_ability": true
+      },
+      {
+        "ability_type": "INITIAL_KNOWLEDGE",
+        "effect": "Knows all the other evil characters.",
+        "group_ability": true
+      }
+    ],
+    "tier_distribution": {
+      "TIER1": 2,
+      "TIER2": 3,
+      "TIER3": 4,
+      "TIER4": 5
+    },
+    "min_number": 0
+  },
+  {
+    "name": "Witch",
+    "alignment": "EVIL",
+    "abilities_list": [
+      {
+        "ability_type": "DEATH_TRIGGER",
+        "effect": "When voted out, can choose a player to curse. The cursed player cannot talk for the rest of the game",
+        "group_ability": false
+      },
+      {
+        "ability_type": "INITIAL_KNOWLEDGE",
+        "effect": "Knows all the other evil characters.",
+        "group_ability": true
+      }
+    ],
+    "tier_distribution": {
+      "TIER1": 0,
+      "TIER2": 1,
+      "TIER3": 1,
+      "TIER4": 2
+    },
+    "min_number": 0
+  },
+  {
+    "name": "Traitor",
+    "alignment": "EVIL",
+    "abilities_list": [
+      {
+        "ability_type": "INITIAL_KNOWLEDGE",
+        "effect": "Knows all the other evil characters.",
+        "group_ability": true
+      },
+      {
+        "ability_type": "PASSIVE",
+        "effect": "He appears as good to all abilities"
+      }
+    ],
+    "tier_distribution": {
+      "TIER1": 0,
+      "TIER2": 0,
+      "TIER3": 1,
+      "TIER4": 1
+    },
+    "min_number": 0
+  },
+  {
+    "name": "Puppeteer",
+    "alignment": "EVIL",
+    "abilities_list": [
+      {
+        "ability_type": "INITIAL_KNOWLEDGE",
+        "effect": "Knows all the other evil characters.",
+        "group_ability": true
+      },
+      {
+        "ability_type": "DUSK_CHOICE",
+        "effect": "Choose a player. It will appear as evil to all abilities during this night.",
+        "group_ability": false
+      }
+    ],
+    "tier_distribution": {
+      "TIER1": 0,
+      "TIER2": 1,
+      "TIER3": 1,
+      "TIER4": 2
+    },
+    "min_number": 0
+  },
+  {
+    "name": "Seer",
+    "alignment": "GOOD",
+    "abilities_list": [
+      {
+        "ability_type": "MIDNIGHT_CHOICE",
+        "effect": "Choose an alive player to learn his alignment.",
+        "group_ability": false
+      }
+    ],
+    "tier_distribution": {
+      "TIER1": 1,
+      "TIER2": 1,
+      "TIER3": 2,
+      "TIER4": 2
+    },
+    "min_number": 0
+  },
+  {
+    "name": "Sheriff",
+    "alignment": "GOOD",
+    "abilities_list": [
+      {
+        "ability_type": "ONE_TIME",
+        "effect": "Accuse a player of being evil and kill him immediately.",
+        "group_ability": false
+      }
+    ],
+    "tier_distribution": {
+      "TIER1": 0,
+      "TIER2": 1,
+      "TIER3": 1,
+      "TIER4": 1
+    },
+    "min_number": 0
+  },
+  {
+    "name": "Medium",
+    "alignment": "GOOD",
+    "abilities_list": [
+      {
+        "ability_type": "MIDNIGHT_CHOICE",
+        "effect": "Choose a dead player to learn his alignment.",
+        "group_ability": false
+      }
+    ],
+    "tier_distribution": {
+      "TIER1": 1,
+      "TIER2": 1,
+      "TIER3": 2,
+      "TIER4": 2
+    },
+    "min_number": 0
+  },
+  {
+    "name": "Freemason",
+    "alignment": "GOOD",
+    "abilities_list": [
+      {
+        "ability_type": "INITIAL_KNOWLEDGE",
+        "effect": "Knows all the other freemasons.",
+        "group_ability": true
+      }
+    ],
+    "tier_distribution": {
+      "TIER1": 0,
+      "TIER2": 2,
+      "TIER3": 2,
+      "TIER4": 3
+    },
+    "min_number": 2
+  },
+  {
+    "name": "Wanderer",
+    "alignment": "GOOD",
+    "abilities_list": [
+      {
+        "ability_type": "DUSK_CHOICE",
+        "effect": "Chose a player to pass the night with. During the night you can only die if the chosen player dies.",
+        "group_ability": false
+      }
+    ],
+    "tier_distribution": {
+      "TIER1": 1,
+      "TIER2": 1,
+      "TIER3": 1,
+      "TIER4": 1
+    },
+    "min_number": 0
+  },
+  {
+    "name": "Villager",
+    "alignment": "GOOD",
+    "abilities_list": [],
+    "tier_distribution": {
+      "TIER1": 2,
+      "TIER2": 3,
+      "TIER3": 4,
+      "TIER4": 5
+    },
+    "min_number": 0
+  },
+  {
+    "name": "Werehamster",
+    "alignment": "NEUTRAL",
+    "abilities_list": [
+      {
+        "ability_type": "INITIAL_KNOWLEDGE",
+        "effect": "Knows all the evil characters.",
+        "group_ability": false
+      }
+    ],
+    "tier_distribution": {
+      "TIER1": 1,
+      "TIER2": 1,
+      "TIER3": 1,
+      "TIER4": 1
+    },
+    "min_number": 0,
+    "win_condition": "SURVIVE"
+  },
+    {
+        "name": "Jester",
+        "alignment": "NEUTRAL",
+        "abilities_list": [
+        ],
+        "tier_distribution": {
+        "TIER1": 0,
+        "TIER2": 1,
+        "TIER3": 1,
+        "TIER4": 1
+        },
+        "min_number": 0,
+        "win_condition": "VOTED_OUT"
+    },
+    {
+        "name": "Ghost",
+        "alignment": "NEUTRAL",
+        "abilities_list": [
+            {
+                "ability_type": "PASSIVE",
+                "effect": "You can die only if voted out during the day.",
+                "group_ability": false
+            }
+        ],
+        "tier_distribution": {
+        "TIER1": 0,
+        "TIER2": 1,
+        "TIER3": 1,
+        "TIER4": 1
+        },
+        "min_number": 0,
+        "win_condition": "SURVIVE"
+    },
+    {
+        "name": "Alchemist",
+        "alignment": "GOOD",
+        "abilities_list": [
+            {
+                "ability_type": "MIDNIGHT_CHOICE",
+                "effect": "Choose a player to poison or to cure from poison. The poison takes effect the following night, eliminating the chosen player unless it is cured.",
+                "group_ability": false
+            }
+        ],
+        "tier_distribution": {
+        "TIER1": 0,
+        "TIER2": 0,
+        "TIER3": 1,
+        "TIER4": 1
+        },
+        "min_number": 0,
+        "win_condition": "LAST_NEUTRAL"
+    },
+    {
+        "name": "Plague Doctor",
+        "alignment": "EVIL",
+        "abilities_list": [
+            {
+                "ability_type": "MIDNIGHT_CHOICE",
+                "effect": "Choose a player to poison. The poison takes effect the following night, eliminating the chosen player unless it is cured.",
+                "group_ability": false
+            }
+        ],
+        "tier_distribution": {
+        "TIER1": 0,
+        "TIER2": 0,
+        "TIER3": 1,
+        "TIER4": 1
+        },
+        "min_number": 0,
+        "win_condition": "LAST_NEUTRAL"
+    }
+]
