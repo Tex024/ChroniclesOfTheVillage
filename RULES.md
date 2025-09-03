@@ -50,7 +50,7 @@ At night, the Narrator calls players in sequence to use their abilities:
 
 ## 🎲 Setup & Play
 
-1. Narrator assigns each player a **Profession** and a **Role** (using the generator).  
+1. Using the generator, the Narrator assigns a character (profession + role) to each player.  
 2. Players receive their **scrolls** (PDFs).  
 3. Narrator follows the **Narrator Script** to run the game.  
 4. Alternate between **Day** and **Night** until one side wins.  

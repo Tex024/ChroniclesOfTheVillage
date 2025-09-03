@@ -9,7 +9,7 @@ It generates **character sheets** for players and a **Narrator’s script** usin
 
 The project is fully modular: new roles, professions, and abilities can be added by editing JSON files.
 
-> 👉 For the full game rules and how to play, see [RULES.md](RULES.md).
+> 👉 For the full game rules and how to play, see [RULES](RULES.md).
 
 ---
 
