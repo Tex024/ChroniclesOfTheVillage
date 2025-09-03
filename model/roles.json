@@ -46,6 +46,29 @@
     "min_number": 0
   },
   {
+    "name": "Executioner",
+    "alignment": "EVIL",
+    "abilities_list": [
+      {
+        "ability_type": "MIDNIGHT_CHOICE",
+        "effect": "Choose a plyer to kill, if that player was neutral or evil you die instead.",
+        "group_ability": false
+      },
+      {
+        "ability_type": "INITIAL_KNOWLEDGE",
+        "effect": "Knows all the other evil characters.",
+        "group_ability": true
+      }
+    ],
+    "tier_distribution": {
+      "TIER1": 0,
+      "TIER2": 0,
+      "TIER3": 1,
+      "TIER4": 1
+    },
+    "min_number": 0
+  },
+  {
     "name": "Traitor",
     "alignment": "EVIL",
     "abilities_list": [
@@ -56,7 +79,7 @@
       },
       {
         "ability_type": "PASSIVE",
-        "effect": "He appears as good to all abilities"
+        "effect": "He appears good to all abilities"
       }
     ],
     "tier_distribution": {
@@ -127,6 +150,23 @@
     "min_number": 0
   },
   {
+    "name": "Templar",
+    "alignment": "GOOD",
+    "abilities_list": [
+      {
+        "ability_type": "ONE_TIME",
+        "effect": "Accuse a player. If they are Evil, they die immediately. If not, you die."
+      }
+    ],
+    "tier_distribution": { 
+      "TIER1": 0, 
+      "TIER2": 1, 
+      "TIER3": 1, 
+      "TIER4": 1 
+    },
+    "min_number": 0
+  },
+  {
     "name": "Medium",
     "alignment": "GOOD",
     "abilities_list": [
@@ -168,7 +208,7 @@
     "abilities_list": [
       {
         "ability_type": "DUSK_CHOICE",
-        "effect": "Chose a player to pass the night with. During the night you can only die if the chosen player dies.",
+        "effect": "Chose a player to pass the night with. During the night you can die only if the chosen player dies.",
         "group_ability": false
       }
     ],
@@ -245,12 +285,50 @@
         "win_condition": "SURVIVE"
     },
     {
+      "name": "Survivor",
+      "alignment": "NEUTRAL",
+      "abilities_list": [
+        {
+          "ability_type": "PASSIVE",
+          "effect": "The first time you are killed during night you survive instead.",
+          "group_ability": false
+        }
+      ],
+      "tier_distribution": {
+        "TIER1": 0,
+        "TIER2": 1,
+        "TIER3": 2,
+        "TIER4": 2
+      },
+      "min_number": 0,
+      "win_condition": "SURVIVE"
+    },
+    {
+      "name": "Reaper",
+      "alignment": "NEUTRAL",
+      "abilities_list": [
+        {
+          "ability_type": "MIDNIGHT_CHOICE",
+          "effect": "If noone has been voted out the day before, you can choose a player to eliminate this night.",
+          "group_ability": false
+        }
+      ],
+      "tier_distribution": {
+        "TIER1": 0,
+        "TIER2": 0,
+        "TIER3": 1,
+        "TIER4": 1
+      },
+      "min_number": 0,
+      "win_condition": "LAST_NEUTRAL"
+    },
+    {
         "name": "Alchemist",
         "alignment": "GOOD",
         "abilities_list": [
             {
                 "ability_type": "MIDNIGHT_CHOICE",
-                "effect": "Choose a player to poison or to cure from poison. The poison takes effect the following night, eliminating the chosen player unless it is cured.",
+                "effect": "Choose a player to poison or to cure from poison. The poison takes effect at the end of the following night, eliminating the chosen player unless it is cured.",
                 "group_ability": false
             }
         ],
@@ -264,12 +342,29 @@
         "win_condition": "LAST_NEUTRAL"
     },
     {
+      "name": "Inquisitor",
+      "alignment": "GOOD",
+      "abilities_list": [
+        {
+          "ability_type": "MIDNIGHT_CHOICE",
+          "effect": "Choose a player to visit during night, if the player is Evil you die."
+        }
+      ],
+      "tier_distribution": { 
+        "TIER1": 1, 
+        "TIER2": 1, 
+        "TIER3": 1, 
+        "TIER4": 1 
+      },
+      "min_number": 0
+    },
+    {
         "name": "Plague Doctor",
         "alignment": "EVIL",
         "abilities_list": [
             {
                 "ability_type": "MIDNIGHT_CHOICE",
-                "effect": "Choose a player to poison. The poison takes effect the following night, eliminating the chosen player unless it is cured.",
+                "effect": "Choose a player to poison. The poison takes effect at the end of the following night, eliminating the chosen player unless it is cured.",
                 "group_ability": false
             }
         ],

@@ -102,11 +102,6 @@
         "ability_type": "ONE_TIME",
         "effect": "Choose a player killed during the previous night and save him.",
         "group_ability": false
-      },
-      {
-        "ability_type": "ONE_TIME",
-        "effect": "Choose a player that is posoned, cure it.",
-        "group_ability": false
       }
     ],
     "tier_distribution": {
@@ -115,6 +110,23 @@
       "TIER3": 1,
       "TIER4": 1
     },
+    "min_number": 0
+  },
+  {
+    "name": "Herbalist",
+    "abilities_list": [
+      {
+        "ability_type": "PASSIVE",
+        "effect": "Cannot be poisoned.",
+        "group_ability": false
+      },
+      {
+        "ability_type": "ONE_TIME",
+        "effect": "Give a healing brew to a player, cure it from poison.",
+        "group_ability": false
+      }
+    ],
+    "tier_distribution": { "TIER1": 0, "TIER2": 0, "TIER3": 1, "TIER4": 2 },
     "min_number": 0
   },
   {
@@ -139,7 +151,7 @@
     "abilities_list": [
       {
         "ability_type": "DUSK_CHOICE",
-        "effect": "Choose a player to watch for the night, preventing him from using his night choice abilities.",
+        "effect": "Choose a player to watch for the night, preventing him from using his night abilities.",
         "group_ability": false
       }
     ],
@@ -186,10 +198,32 @@
     "min_number": 0
   },
   {
-    "name": "Knight",
+    "name": "Merchant",
     "abilities_list": [
       {
         "ability_type": "VOTE",
+        "effect": "If you don't receive any vote you gain a coin.",
+        "group_ability": false
+      },
+      {
+        "ability_type": "PASSIVE",
+        "effect": "You can spend 2 coins to avoid being voted out.",
+        "group_ability": false
+      }
+    ],
+    "tier_distribution": {
+      "TIER1": 0,
+      "TIER2": 1,
+      "TIER3": 1,
+      "TIER4": 1
+    },
+    "min_number": 0
+  },
+  {
+    "name": "Knight",
+    "abilities_list": [
+      {
+        "ability_type": "PASSIVE",
         "effect": "You cannot be killed during night.",
         "group_ability": false
       }

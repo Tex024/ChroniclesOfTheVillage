@@ -423,7 +423,7 @@ class NarratorWriter:
         if tex_path.exists():
             tex_path.unlink()
 
-    def write_narrator(self, players: List[Player], filename: str = "narrator_script.tex") -> None:
+    def write_narrator(self, players: List[Player], filename: str = "Narrator.tex") -> None:
         """
         Create and compile narrator script for the given players.
         """
