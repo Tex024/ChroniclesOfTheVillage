@@ -64,6 +64,11 @@ The system generates:
 
 ### Requirements
 - `Python 3.9+`
+- **LaTeX distribution** for PDF generation:
+  - **Windows**: [MiKTeX](https://miktex.org/download) or [TeX Live](https://www.tug.org/texlive/). Make sure `pdflatex.exe` is in your PATH.
+  - **macOS**: [MacTeX](https://tug.org/mactex/)
+  - **Linux**: `texlive` package (e.g., `sudo apt install texlive-full`)
+
 
 ### Installation
 ```bash
@@ -75,7 +80,7 @@ git clone https://github.com/Tex024/ChroniclesOfTheVillage.git
 cd chronicles-of-the-village
 python3 main.py
 ```
-Outputs will be written in the output directory
+Outputs will be written in the out directory
 
 ---
 

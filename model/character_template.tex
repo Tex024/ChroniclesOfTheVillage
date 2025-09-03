@@ -1,25 +1,24 @@
 \documentclass[12pt, a4paper]{article}
 
-% --- Preamble and Packages ---
-\usepackage[utf8]{inputenc} % For text encoding
-\usepackage[T1]{fontenc} % For font encoding
-\usepackage[lining]{ebgaramond} % A classic, old-style font. Looks like a book.
-\usepackage[left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry} % Set page margins
-\usepackage{tcolorbox} % For creating beautiful, customizable boxes
-\usepackage{enumitem} % To customize lists
-\usepackage{xcolor} % For colors
-\usepackage{graphicx} % To include images
-\usepackage{parskip} % No indentation, space between paragraphs
+% --- Preamble ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[lining]{ebgaramond}
+\usepackage[left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm]{geometry}
+\usepackage{tcolorbox}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{ifthen}
 
-% --- Custom Colors and Styles for a Medieval Look ---
+% --- Colors ---
 \definecolor{Parchment}{HTML}{F8F2E4}
 \definecolor{OldInk}{HTML}{3C2A21}
-\definecolor{WaxSealRed}{HTML}{B71C1C}
 \definecolor{GoodGreen}{HTML}{4CAF50}
 \definecolor{EvilRed}{HTML}{D32F2F}
 \definecolor{NeutralGray}{HTML}{757575}
 
-% --- Themed tcolorbox for the character sheet ---
+% --- Character Box Style ---
 \tcbset{
   characterbox/.style={
     sharp corners,
@@ -36,82 +35,58 @@
   }
 }
 
-% --- Custom Command for Section Dividers ---
+% --- Section Divider ---
 \newcommand{\sectiondivider}{%
-  \par\noindent\hrulefill\quad\raisebox{-0.5ex}{\textbf{✦}}\quad\hrulefill\par
+  \par\noindent\hrulefill\quad\textbf{$\bullet$}\quad\hrulefill\par
 }
 
-% --- Placeholders and Helper Commands ---
-% Fill in the details for your character below.
-\newcommand{\playername}{[Player Name]}
-\newcommand{\playerid}{[Player ID]}
-\newcommand{\professionname}{[Profession Name]}
-\newcommand{\professionabilities}{[Profession Abilities]}
-\newcommand{\rolename}{[Role Name]}
-\newcommand{\roleabilities}{[Role Abilities]}
-\newcommand{\alignment}{[Alignement]}
-\newcommand{\alignmentcolor}{[Alignement Color]}
-\newcommand{\wincondition}{[Win Condition]}
-
-% Use this command to display an ability.
-\newcommand{\displayability}[3]{%
-    \item \textbf{#1}: #2 #3%
+% --- Single ability item ---
+% expects two args: name, effect
+\newcommand{\displayability}[2]{%
+  \item \textbf{#1}: #2%
 }
 
-% --- Document Start ---
+% --- Document ---
 \begin{document}
-
-% --- Title Section ---
 \pagestyle{empty}
+
 \begin{center}
-    {\Huge\textbf{The Chronices of the Village}}\\
-    {\large for \playername}
+    {\Huge\textbf{The Chronicles of the Village}}\\
+    {\large for <<<PLAYER_NAME>>>}
     \vspace{1cm}
 \end{center}
 
-% --- Main Character Box ---
 \begin{tcolorbox}[characterbox, title={Character}]
-
     \vspace{-4mm}
     \section*{\centering Your Public Visage}
     \sectiondivider
     \vspace{2mm}
 
-    \textbf{Profession:} \professionname
+    \textbf{Profession:} <<<PROFESSION_NAME>>>
     \vspace{2mm}
 
-    \textbf{Ability}
-    \begin{itemize}[leftmargin=*, label=\textbullet, itemsep=2pt, topsep=2pt]
-        \professionabilities
-        % add here the player profession abilities with this format:
-        % \displayability{ability_type}{effect}{optional (group ability)}
-        % E.g., \displayability{Predawn Choice}{Choose a player to jail for the day, preventing him from voting.}{}
-    \end{itemize}
+    \textbf{Abilities:}
+
+    % Python will insert either the full itemize block here or nothing.
+    <<<PROFESSION_ABILITIES>>>
 
     \vspace{6mm}
     \section*{\centering Your Secret Identity}
     \sectiondivider
     \vspace{2mm}
 
-    \textbf{Role:} \rolename
-
+    \textbf{Role:} <<<ROLE_NAME>>>
     \begin{itemize}[leftmargin=*, label=--, itemsep=2pt]
-        \item \textbf{Allegiance:} {\alignmentcolor\alignment\color{black}}
-        \item \textbf{Secret goal:} \wincondition
+        \item \textbf{Allegiance:} <<<ALIGNED_AND_COLOR>>>
+        \item \textbf{Secret goal:} <<<WIN_CONDITION>>>
     \end{itemize}
     \vspace{2mm}
 
-    \textbf{Secret Abilities}
-    \begin{itemize}[leftmargin=*, label=\textbullet, itemsep=2pt, topsep=2pt]
-        \roleabilities
-        % add here the player roles abilities with this format:
-        % \displayability{ability_type}{effect}{optional (group ability)}
-        % E.g., \displayability{Predawn Choice}{Choose a player to jail for the day, preventing him from voting.}{}
-    \end{itemize}
+    \textbf{Secret Abilities:}
+    <<<ROLE_ABILITIES>>>
 
 \end{tcolorbox}
 
-% --- Footer ---
 \vspace{1cm}
 \begin{center}
     \textit{This scroll is a secret between you and the Master of the Game.} \\

@@ -38,14 +38,17 @@ def main():
     players = [Player(str(i), names[i], characters[i]) for i in range(n_players)]
 
     # Step 6: Clean output directory
-    out_dir = Path("characters_out")
+    out_dir = Path("out")
     if out_dir.exists():
         shutil.rmtree(out_dir)
 
     # Step 7: Write character sheets
-    writer = Writer("model/character_template.tex", "model/narrator_template.tex","characters_out")
-    writer.write_all(players)
-
+    pwriter = PlayerWriter("model/character_template.tex","out")
+    pwriter.write_players(players)
+    
+    # Step 8: Write narrator sheet
+    nwriter = NarratorWriter("model/narrator_template.tex","out")
+    nwriter.write_narrator(players)
 
 if __name__ == "__main__":
     main()

@@ -36,20 +36,12 @@
 
 % --- Section Divider ---
 \newcommand{\sectiondivider}{%
-  \par\noindent\hrulefill\quad\raisebox{-0.5ex}{\textbf{✦}}\quad\hrulefill\par
+  \par\noindent\hrulefill\quad\textbf{$\bullet$}\quad\hrulefill\par
 }
 
-% --- Placeholders ---
-\newcommand{\playerlist}{[Player List]}
-\newcommand{\specialabilities}{[Special Abilities]}
-\newcommand{\duskphase}{[Dusk Phase Abilities]}
-\newcommand{\midnightphase}{[Midnight Phase Abilities]}
-\newcommand{\predawnphase}{[Predawn Phase Abilities]}
-\newcommand{\initialabilities}{[Initial Knowledge Abilities]}
-
-% --- Helper Commands ---
-\newcommand{\playerentry}[4]{\item \textbf{#1} -- Profession: #2, Role: #3, Alignement: #4}
-\newcommand{\abilityentry}[3]{\item (#1) \textbf{#2}: #3}
+% --- Entry macros ---
+\newcommand{\playerentry}[4]{\item \textbf{#1} -- Profession: #2, Role: #3, Alignment: #4}
+\newcommand{\abilityentry}[3]{\item \textbf{#1} (#2): #3}
 
 % --- Document Start ---
 \begin{document}
@@ -63,10 +55,9 @@
 
 % --- Players Overview ---
 \begin{tcolorbox}[narrbox, title={Players Overview}]
-\begin{itemize}[leftmargin=*, itemsep=2pt]
-    \playerlist
-    % Example: \playerentry{Alice}{Blacksmith}{Seer}{\color{GoodGreen}Good\color{black}}
-\end{itemize}
+%%% PLAYER LIST HERE (full itemize block or empty)
+<<<PLAYER_LIST>>>
+% Example item: \playerentry{Alice}{Blacksmith}{Seer}{\textcolor{GoodGreen}{Good}}
 \end{tcolorbox}
 
 \vspace{0.2cm}
@@ -74,10 +65,9 @@
 % --- Passive, One-Time, Death Trigger Abilities ---
 \begin{tcolorbox}[narrbox, title={Special Abilities}]
 \textit{Keep track of these abilities and resolve them when conditions are met.}
-\begin{itemize}[leftmargin=*, itemsep=2pt]
-    \specialabilities
-    % Example: \abilityentry{Necromancer}{Death Trigger}{effect...}
-\end{itemize}
+%%% SPECIAL ABILITIES (full itemize block or empty)
+<<<SPECIAL_ABILITIES>>>
+% Example: \abilityentry{Necromancer}{Death Trigger}{effect...}
 \end{tcolorbox}
 
 \vspace{0.2cm}
@@ -87,10 +77,8 @@
 \sectiondivider
 \begin{enumerate}[leftmargin=*, itemsep=2pt]
     \item Call each character with \textbf{Initial Knowledge} abilities one at a time:
-    \begin{itemize}[leftmargin=2em]
-        \initialabilities
-        % Example: \abilityentry{Farmer}{Initial Knowledge}{effect...}
-    \end{itemize}
+    % initial abilities as nested itemize block (or empty)
+    <<<INITIAL_ABILITIES>>>
     \item Continue with the standard night sequence: Dusk $\rightarrow$ Midnight $\rightarrow$ Predawn.
 \end{enumerate}
 \end{tcolorbox}
@@ -102,24 +90,18 @@
 \sectiondivider
 
 \textbf{Dusk Phase}
-\begin{itemize}[leftmargin=2em, itemsep=2pt]
-    \duskphase
-    % Example: \abilityentry{Farmer}{Dusk Choice}{effect...}
-\end{itemize}
+%%% Dusk abilities
+<<<DUSK_PHASE>>>
 
 \vspace{0.2cm}
 \textbf{Midnight Phase}
-\begin{itemize}[leftmargin=2em, itemsep=2pt]
-    \midnightphase
-    % Example: \abilityentry{Farmer}{Midnight Choice}{effect...}
-\end{itemize}
+%%% Midnight abilities
+<<<MIDNIGHT_PHASE>>>
 
 \vspace{0.2cm}
 \textbf{Predawn Phase}
-\begin{itemize}[leftmargin=2em, itemsep=2pt]
-    \predawnphase
-    % Example: \abilityentry{Farmer}{Predawn Choice}{effect...}
-\end{itemize}
+%%% Predawn abilities
+<<<PREDAWN_PHASE>>>
 \end{tcolorbox}
 
 \vspace{0.2cm}
