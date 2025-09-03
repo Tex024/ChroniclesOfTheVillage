@@ -1,6 +1,6 @@
 # Chronicles of the Village
 
-**Chronicles of the Village** is a modular **social deduction game engine** inspired by *Werewolf* and *Mafia*.  
+**Chronicles of the Village** is a modular **social deduction game generator** inspired by *Werewolf* and *Mafia*.  
 It generates **character sheets** for players and a **Narrator’s script** using LaTeX.
 
 - 🎭 **Professions** → Public identities, known to everyone.  
