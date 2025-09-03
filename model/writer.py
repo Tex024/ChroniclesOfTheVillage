@@ -80,7 +80,7 @@ class PlayerWriter:
         effect = ability.effect or ""
         if getattr(ability, "group_ability", False):
             # append suffix as plain text (escaped if needed)
-            effect = effect + " \\emph{(Group ability)}"
+            effect = effect + " \\textit{(Group ability)}"
 
         if not self.allow_latex:
             name = self._escape_latex(name)

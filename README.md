@@ -1,90 +1,80 @@
 # Chronicles of the Village
 
-**Chronicles of the Village** is a modular **social deduction game** inspired by *Werewolf* and *Mafia*.  
-Each player receives a **Profession** (public identity) and a **Role** (secret identity).  
-The **Narrator** (Master of the Game) guides the story through alternating **Day** and **Night** phases until one side wins.
+**Chronicles of the Village** is a modular **social deduction game engine** inspired by *Werewolf* and *Mafia*.  
+It generates **character sheets** for players and a **Narrator’s script** using LaTeX.
+
+- 🎭 **Professions** → Public identities, known to everyone.  
+- 🕵️ **Roles** → Secret identities with alignments and powers.  
+- 📜 **Narrator Script** → Step-by-step guide for the game master.  
+
+The project is fully modular: new roles, professions, and abilities can be added by editing JSON files.
+
+> 👉 For the full game rules and how to play, see [RULES.md](RULES.md).
 
 ---
 
-## Game Overview
+## 📂 Project Structure
 
-- **Professions** → Public identities, visible to all players.  
-- **Roles** → Secret identities, alignments, and win conditions.  
-- **Abilities** → Actions usable at night or triggered by specific conditions.  
-
-### Alignments
-- 🟢 **Good** → Protect the village and eliminate all evils.  
-- 🔴 **Evil** → Conspire to overthrow the village.  
-- ⚪ **Neutral** → Pursue personal victory conditions.  
-
----
-
-## Game Phases
-
-### Night
-The Narrator resolves abilities in this order:
-1. **Dusk Phase** → Abilities at the start of the night.  
-2. **Midnight Phase** → Most actions (attacks, investigations, protections).  
-3. **Predawn Phase** → Abilities at the end of the night.  
-
-### Day
-1. **Morning** → Open discussion among players.  
-2. **Afternoon** → Voting phase.  
-   - Plurality decides who is executed.  
-   - In case of a tie, nobody is eliminated.  
+- `roles.json` → Defines roles (secret identities, alignments, abilities).  
+- `professions.json` → Defines professions (public abilities).  
+- `core.py` → Core definitions: `Player`, `Character`, `Role`, `Profession`, `Ability`, `Alignment`.  
+- `parser.py` → Loads JSON data.  
+- `generator.py` → Randomly assigns roles and professions to players.  
+- `writer.py` → Generates LaTeX sheets (players + narrator).  
+- `out/` → Output directory (generated PDFs).  
 
 ---
 
-## Victory Conditions
-- **Good wins** if all Evil players are eliminated.  
-- **Evil wins** if all Good players are eliminated.  
-- **Neutral wins** if their personal win condition is met when the game ends.  
+## ⚙️ Requirements
 
----
+- **Python 3.9+**
+- **LaTeX distribution** (for PDF generation):
+  - **Windows** → [MiKTeX](https://miktex.org/download) or [TeX Live](https://www.tug.org/texlive/). Ensure `pdflatex.exe` is in your `PATH`.  
+  - **macOS** → [MacTeX](https://tug.org/mactex/)  
+  - **Linux** → `texlive-full` (e.g. `sudo apt install texlive-full`)  
 
-## Project Structure
+Verify installation by running:
 
-### Data Files
-- `roles.json` → Defines secret roles (alignments, win conditions, abilities).  
-- `professions.json` → Defines professions and their public abilities.  
+```bash
+pdflatex --version
+```
 
-### Code Modules
-- **`core.py`** → Core definitions: `Player`, `Character`, `Role`, `Profession`, `Ability`, `Alignment`.  
-- **`parser.py`** → Loads roles and professions from JSON.  
-- **`generator.py`** → Randomly assigns characters to players.  
-- **`writer.py`** → Generates LaTeX player sheets and the Narrator’s script.
+## 🚀 Installation and Usage
 
-The system generates:
-- **Character Sheets** → Personalized LaTeX scrolls for each player.  
-- **Narrator Script** → A structured LaTeX guide for the Narrator.  
+Clone the repository:
 
----
-
-## Getting Started
-
-### Requirements
-- `Python 3.9+`
-- **LaTeX distribution** for PDF generation:
-  - **Windows**: [MiKTeX](https://miktex.org/download) or [TeX Live](https://www.tug.org/texlive/). Make sure `pdflatex.exe` is in your PATH.
-  - **macOS**: [MacTeX](https://tug.org/mactex/)
-  - **Linux**: `texlive` package (e.g., `sudo apt install texlive-full`)
-
-
-### Installation
 ```bash
 git clone https://github.com/Tex024/ChroniclesOfTheVillage.git
+cd ChroniclesOfTheVillage
 ```
 
-### Usage
+Run the main script, and write the players names when requested:
 ```bash
-cd chronicles-of-the-village
 python3 main.py
 ```
-Outputs will be written in the out directory
 
----
+Outputs:
+- `out/player_<name>.pdf`: personalized character sheet for the player
+- `out/narrator_script.pdf`: complete narrator script
 
-## Contributing
-The system is fully modular.
-New professions, roles, and abilities can be added by editing the JSON files.
-Pull requests are welcome!
+## 🛠️ Customization
+
+Add new professions/roles by editing the JSON files:
+
+- `professions.json` → Add new public identities.
+
+- `roles.json` → Add new secret roles, alignments, and abilities.
+
+The system automatically integrates new definitions when generating sheets.
+
+## 🤝 Contributing
+
+Contributions are welcome!
+Feel free to open issues or submit pull requests for:
+
+- new roles/professions
+- bug fixes
+- improved LaTeX templates
+
+## 📜 License
+MIT License – free to use and modify.
